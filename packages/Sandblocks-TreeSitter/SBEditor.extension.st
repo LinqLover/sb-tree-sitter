@@ -55,6 +55,13 @@ SBEditor >> newKotlinFile [
 ]
 
 { #category : #'*Sandblocks-TreeSitter' }
+SBEditor >> newLatexFile [
+	<addAction>
+
+	self newFileFor: SBLatex
+]
+
+{ #category : #'*Sandblocks-TreeSitter' }
 SBEditor >> newPythonFile [
 	<addAction>
 
