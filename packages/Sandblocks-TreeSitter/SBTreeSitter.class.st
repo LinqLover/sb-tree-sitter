@@ -236,6 +236,13 @@ SBTreeSitter >> languageVersion: language [
 	^ self externalCallFailed
 ]
 
+{ #category : #'ffi languages' }
+SBTreeSitter >> latex [
+
+	<apicall: SBTSLanguageStruct* tree_sitter_latex () module: 'tree-sitter-smalltalk'>
+	^ SBTSLanguage tryPatchLibrary: 'latex-lsp/tree-sitter-latex' name: 'latex' context: thisContext branch: 'master' subpath: ''
+]
+
 { #category : #ffi }
 SBTreeSitter >> node: aNode childByFieldName: aString length: aNumber [
 
